@@ -1,0 +1,39 @@
+{% macro displayNewsSource(sources) %}
+
+
+<!-- Card -->
+    <div class="container-fluid">
+            <div class="card-columns">
+        {% for source in sources %}
+            
+                    <!-- Card image -->
+                <div class="card">
+                    <div class="view overlay">
+                    <!-- <img class="card-img-top" src="" alt=" poster"> -->
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                    </div>
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                    <!-- Title -->
+                    <h4 class="card-title">{{ source.name}}</h4>
+                    <!-- Text -->
+                    <p class="card-text">{{ source.description}}.</p>
+                    <!-- Button -->
+                    <a href="/newspage/{{source.id}}" class="btn btn-lg btn-dark">Read {{source.name}}</a>
+                
+                    </div>
+                </div>
+
+        {% endfor %}
+            </div>
+    </div>
+                    <!-- Card -->
+
+   
+
+{% endmacro %}
+

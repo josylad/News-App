@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% from 'macros.html' import displayNewsSource%}
+
+<!-- Styles block --> 
+{% block styles %}
+    {{ super () }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock%}
+
+        {% block content %}
+        <div class="jumbotron mdb-color special-color-dark text-center text-white">
+                <h2 class="h2">WELCOME TO NEWS TREND</h2>
+            </div>
+        <div class="container">
+                <!-- <form>
+                    <input type="text" name="movie_query" placeholder="Search for a News" class="form-control">
+                    <input type="submit"  value="Submit" class="btn btn-dark">
+                </form> -->
+            
+            </div>
+    <div class="container-fluid" >
+     
+        <div id="nowshowing" class="mt-2">
+            </div>
+        <h2 class="mdb-color special-color-dark h2 text-white mt-4 mb-4 text-center pb-4 pt-4">News Sources</h2>
+
+            {{ displayNewsSource(sources)}}
+
+       
+        <ul>
+            <!-- {% for source in sources %}
+            
+            <li>{{ source.name}}</li>
+            {% endfor %} -->
+        </ul>
+    </div>
+
+        {% endblock%}
+    
