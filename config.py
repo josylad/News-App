@@ -4,3 +4,12 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 
+class Config:
+    '''
+    General configuration parent class
+    '''
+    API_BASE_URL ='https://newsapi.org/v2/sources?language=en&apiKey={}'
+    API_KEY = os.environ.get('API_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
